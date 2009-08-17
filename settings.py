@@ -1,4 +1,4 @@
-# Django settings for Bax_CMS project.
+# Django settings for Dina_CMS project.
 import os
 
 
@@ -63,7 +63,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join (os.path.dirname (__file__) , 'media').replace ('\\' , '/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -92,12 +92,12 @@ MIDDLEWARE_CLASSES = (
 )
 
 # original one
-#ROOT_URLCONF = 'Bax_CMS.urls'
+#ROOT_URLCONF = 'Dina_CMS.urls'
 #ower changed one
 ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
-    os.path.join (os.path.dirname (__file__) , 'templates').replace ('\\' .'/'),
+    os.path.join (os.path.dirname (__file__) , 'templates').replace ('\\' ,'/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -105,10 +105,12 @@ TEMPLATE_DIRS = (
 
 
 
-#@@@ Never use never use the dir name Bax_CMS in module starts
+#@@@ Never use never use the dir name Dina_CMS in module starts
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
+    'admin',
 )
