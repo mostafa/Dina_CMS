@@ -41,3 +41,4 @@ def read_file (path):
 
 
 print "dpm-buildpkg tool "
+
